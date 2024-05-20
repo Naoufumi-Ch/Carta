@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Vender</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Vender</a></li>
-            <li><a href="#">Ventas</a></li>
-        </ul>
-    </nav>
-    <div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">POS</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ventas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         <h1>Vender</h1>
-        <label for="barcode">Código de barras:</label>
-        <input type="text" id="barcode" placeholder="Escribe el código">
-        <table>
+        <input type="text" placeholder="Escribe el código de barras" id="codigoBarras">
+        <table id="tablaProductos">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -30,16 +32,12 @@
                     <th>Quitar</th>
                 </tr>
             </thead>
-            <tbody id="product-list">
-                <!-- Aquí se agregarán las filas dinámicamente -->
-            </tbody>
+            <tbody></tbody>
         </table>
-        <div class="total">
-            Total: <span id="total-amount">0.00</span>
-        </div>
-        <button id="complete-sale">Terminar venta</button>
-        <button id="cancel-sale">Cancelar venta</button>
-    </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <p>Total: <span id="total">0</span></p>
+        <button id="terminarVenta">Terminar venta</button>
+        <button id="cancelarVenta">Cancelar venta</button>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
