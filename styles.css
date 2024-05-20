@@ -1,152 +1,90 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
 }
 
-nav {
-    background-color: #007bff;
-    padding: 1em;
+header {
+    background-color: #1e88e5;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
 }
 
-nav ul li {
-    margin: 0 1em;
+nav li {
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffdd57;
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.container {
+main {
+    padding: 20px;
     max-width: 800px;
-    margin: 2em auto;
-    padding: 2em;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #007bff;
-}
-
-label {
-    font-weight: bold;
-    color: #555;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 0.5em;
-    margin: 1em 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+    color: #1e88e5;
+    margin-top: 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1em;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-table, th, td {
-    border: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
 th, td {
-    padding: 0.75em;
+    padding: 8px;
     text-align: left;
-    color: #555;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #f7f7f7;
+    background-color: #1e88e5;
+    color: #fff;
 }
 
-td {
-    background-color: #fff;
-}
-
-tr:nth-child(even) td {
-    background-color: #f9f9f9;
-}
-
-tr:hover td {
-    background-color: #f1f1f1;
-}
-
-.total {
-    margin-top: 1em;
-    font-size: 1.5em;
-    text-align: right;
-    color: #007bff;
-    font-weight: bold;
+tr:hover {
+    background-color: #f5f5f5;
 }
 
 button {
-    padding: 0.75em 1.5em;
-    margin-top: 1em;
-    cursor: pointer;
-    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #1e88e5;
+    color: #fff;
     border: none;
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#complete-sale {
-    background-color: #28a745;
-    color: white;
-    margin-right: 1em;
-}
-
-#complete-sale:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
-
-#cancel-sale {
-    background-color: #dc3545;
-    color: white;
-}
-
-#cancel-sale:hover {
-    background-color: #c82333;
-    transform: scale(1.05);
-}
-
-.remove-product {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 0.5em;
+    padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.remove-product:hover {
-    background-color: #c82333;
-    transform: scale(1.05);
-    }
+button:hover {
+    background-color: #1976d2;
+}
+
+#total {
+    font-weight: bold;
+}
