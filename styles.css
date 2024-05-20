@@ -1,107 +1,65 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+nav {
+    background-color: #007bff;
+    padding: 1em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin-right: 1em;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
-section {
-    padding: 2rem;
+.container {
+    padding: 2em;
 }
 
-#inicio {
-    background: #f4f4f4;
-    text-align: center;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
 }
 
-#servicios {
-    background: #fff;
-}
-
-.servicio {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin: 1rem 0;
-    transition: transform 0.3s;
-}
-
-.servicio:hover {
-    transform: scale(1.05);
-}
-
-#testimonios {
-    background: #f4f4f4;
-    text-align: center;
-}
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-}
-
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-}
-
-#contacto {
-    background: #fff;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    margin: 0.5rem 0 0.2rem;
-}
-
-form input, form textarea {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+table, th, td {
     border: 1px solid #ddd;
 }
 
-form button {
-    padding: 0.5rem;
-    background: #333;
-    color: #fff;
-    border: none;
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+.total {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 0.5em 1em;
+    margin-top: 1em;
     cursor: pointer;
 }
 
-form button:hover {
-    background: #555;
+#complete-sale {
+    background-color: #28a745;
+    color: white;
+    border: none;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+#cancel-sale {
+    background-color: #dc3545;
+    color: white;
+    border: none;
 }
