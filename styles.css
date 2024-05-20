@@ -1,65 +1,90 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-nav {
-    background-color: #007bff;
-    padding: 1em;
+header {
+    background-color: #1e88e5;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
-    margin-right: 1em;
+nav li {
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.container {
-    padding: 2em;
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+h1 {
+    color: #1e88e5;
+    margin-top: 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1em;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
 th, td {
-    padding: 0.5em;
+    padding: 8px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.total {
-    margin-top: 1em;
-    font-size: 1.2em;
+th {
+    background-color: #1e88e5;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }
 
 button {
-    padding: 0.5em 1em;
-    margin-top: 1em;
+    margin-right: 10px;
+    background-color: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#complete-sale {
-    background-color: #28a745;
-    color: white;
-    border: none;
+button:hover {
+    background-color: #1976d2;
 }
 
-#cancel-sale {
-    background-color: #dc3545;
-    color: white;
-    border: none;
+#total {
+    font-weight: bold;
 }
