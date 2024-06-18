@@ -3,6 +3,7 @@ const tablaProductos = document.getElementById('tablaProductos');
 const totalElement = document.getElementById('total');
 const terminarVentaBtn = document.getElementById('terminarVenta');
 const cancelarVentaBtn = document.getElementById('cancelarVenta');
+const enviarCompraBtn = document.getElementById('enviarCompra'); // New line
 
 let productos = [];
 let total = 0;
@@ -80,6 +81,23 @@ terminarVentaBtn.addEventListener('click', () => {
 });
 
 cancelarVentaBtn.addEventListener('click', () => {
+    productos = [];
+    total = 0;
+    renderizarTabla();
+    actualizarTotal();
+});
+
+// New function to handle the "Enviar a la compra" button click
+enviarCompraBtn.addEventListener('click', () => {
+    if (productos.length === 0) {
+        alert('No hay productos para enviar a la compra');
+        return;
+    }
+
+    // Aquí puedes implementar la lógica para enviar los productos a la compra
+    // Por ejemplo, puedes enviar los datos al servidor o mostrar un resumen de la compra
+
+    alert('Productos enviados a la compra');
     productos = [];
     total = 0;
     renderizarTabla();
