@@ -1,43 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vender</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Feliz Cumpleaños Mercedes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .french {
+            font-style: italic;
+            color: #4a4a4a;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">POS</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ventas</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Vender</h1>
-        <input type="text" placeholder="Escribe el código de barras" id="codigoBarras">
-        <table id="tablaProductos">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Código</th>
-                    <th>Descripción</th>
-                    <th>Precio de venta</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
-                    <th>Quitar</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <p>Total: <span id="total">0</span></p>
-        <button id="terminarVenta">Terminar venta</button>
-        <button id="cancelarVenta">Cancelar venta</button>
-    </main>
-    <script src="script.js"></script>
+    <div class="card">
+        <h1>¡Feliz Cumpleaños, Mercedes!</h1>
+        <p>Mercedes Røa Iglesias,</p>
+        <p>En este día tan especial, quiero expresarte lo mucho que significas para mí. Mi corazón se llena de alegría al celebrar tus 18 años, una etapa llena de sueños y posibilidades.</p>
+        <p>Quiero que sepas que te quiero y te amo profundamente. Tu presencia en mi vida es un regalo invaluable, y cada momento contigo es un tesoro que guardo en mi corazón.</p>
+        <p class="french">"La vie est un défi à relever, un bonheur à mériter, une aventure à tenter."</p>
+        <p>Como dice esta frase en francés: "La vida es un desafío que superar, una felicidad que merecer, una aventura que intentar." Y estoy emocionado de ver cómo enfrentas estos desafíos y vives esta gran aventura.</p>
+        <p>Recuerda siempre: "La jeunesse n'est pas une période de la vie, elle est un état d'esprit." (La juventud no es un período de la vida, es un estado de ánimo.)</p>
+        <p>Que este nuevo año de vida esté lleno de amor, aprendizaje y crecimiento. Eres una joya única y preciosa en este vasto universo.</p>
+        <p>Con todo mi amor,</p>
+        <p>Rubén Darío</p>
+        <button id="showLove">Mostrar más amor</button>
+    </div>
+
+    <script>
+        const loveMessages = [
+            "Eres mi sol en los días nublados.",
+            "Tu sonrisa ilumina mi mundo.",
+            "Contigo, cada día es una aventura.",
+            "Eres la melodía más dulce en la sinfonía de mi vida.",
+            "Tu amor me inspira a ser mejor cada día."
+        ];
+
+        let currentIndex = 0;
+
+        document.getElementById('showLove').addEventListener('click', function() {
+            const card = document.querySelector('.card');
+            const newMessage = document.createElement('p');
+            newMessage.textContent = loveMessages[currentIndex];
+            newMessage.style.color = '#ff69b4';
+            newMessage.style.fontWeight = 'bold';
+            card.insertBefore(newMessage, this);
+            
+            currentIndex = (currentIndex + 1) % loveMessages.length;
+            
+            if (currentIndex === 0) {
+                this.textContent = 'Eres la mejor merce, aunque no hablamos mucho seps 
+                    que en mi mente siempre estas ❤️';
+                this.disabled = true;
+            }
+        });
+    </script>
 </body>
 </html>
