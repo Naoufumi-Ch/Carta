@@ -3,150 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venta de Carros</title>
+    <title>Para la Mejor Mamá del Mundo: María Llanos</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f4f0;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             text-align: center;
-            padding: 1rem 0;
         }
 
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .car-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .car-item {
             background-color: #fff;
-            margin: 1rem;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 30%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            width: 600px;
         }
 
-        .car-item img {
-            max-width: 100%;
-            border-radius: 5px;
+        h1 {
+            color: #e44d26;
+            margin-bottom: 20px;
         }
 
-        .car-item h3 {
-            margin-top: 0;
+        p {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1em;
         }
 
-        .car-item button {
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 5px;
+        .mensaje-filosofico {
+            font-style: italic;
+            color: #777;
+            margin-top: 40px;
         }
 
-        .car-item button:hover {
-            background-color: #218838;
-        }
-
-        .cart {
-            background-color: #fff;
-            padding: 1rem;
-            margin: 1rem 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .cart h2 {
-            margin-top: 0;
-        }
-
-        .cart ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .cart ul li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .cart ul li:last-child {
-            border-bottom: none;
-        }
-
-        .cart .total {
-            font-weight: bold;
-            margin-top: 1rem;
+        .corazon {
+            color: #e44d26;
+            font-size: 2em;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Venta de Carros</h1>
-    </header>
     <div class="container">
-        <div class="car-list" id="carList">
-            <div class="car-item">
-                <img src="https://via.placeholder.com/300x200" alt="Carro 1">
-                <h3>Carro 1</h3>
-                <p>Precio: $20,000</p>
-                <button onclick="addToCart('Carro 1', 20000)">Agregar al Carrito</button>
-            </div>
-            <div class="car-item">
-                <img src="https://via.placeholder.com/300x200" alt="Carro 2">
-                <h3>Carro 2</h3>
-                <p>Precio: $25,000</p>
-                <button onclick="addToCart('Carro 2', 25000)">Agregar al Carrito</button>
-            </div>
-            <div class="car-item">
-                <img src="https://via.placeholder.com/300x200" alt="Carro 3">
-                <h3>Carro 3</h3>
-                <p>Precio: $30,000</p>
-                <button onclick="addToCart('Carro 3', 30000)">Agregar al Carrito</button>
-            </div>
-        </div>
-        <div class="cart" id="cart">
-            <h2>Carrito de Compras</h2>
-            <ul id="cartItems"></ul>
-            <p class="total">Total: $<span id="cartTotal">0</span></p>
-        </div>
+        <div class="corazon">❤️</div>
+        <h1>¡Feliz Día de las Madres, Querida Mamá María Llanos!</h1>
+        <p>Mamá, las palabras a veces se quedan cortas para expresar lo mucho que significas para mí. La vida me la diste tú, y por ese regalo inmenso estaré eternamente agradecido/a. Aunque a veces la distancia o las circunstancias no nos permitan compartir todo el tiempo que quisiera, sé que tu amor y tu preocupación siempre están presentes en mi vida. Cada llamada, cada mensaje, cada pequeño detalle tuyo es un faro que me guía.</p>
+        <p>Tu fortaleza, tu cariño incondicional y tu espíritu luchador son una inspiración constante. Gracias por enseñarme el valor de la perseverancia y por creer en mí incluso cuando yo mismo/a dudaba.</p>
+        <p class="mensaje-filosofico">"La vida es un eco: lo que envías, regresa a ti. Mamá, tú has enviado tanto amor al mundo, que hoy y siempre mereces recibirlo multiplicado."</p>
+        <p>Con todo mi amor y gratitud,</p>
+        <p>(Tu Nombre)</p>
     </div>
 
     <script>
-        let cart = [];
-        let total = 0;
-
-        function addToCart(carName, carPrice) {
-            cart.push({ name: carName, price: carPrice });
-            total += carPrice;
-            updateCart();
-        }
-
-        function updateCart() {
-            const cartItems = document.getElementById('cartItems');
-            cartItems.innerHTML = '';
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = `${item.name} - $${item.price}`;
-                cartItems.appendChild(li);
+        // Pequeña animación para el corazón (opcional)
+        const corazon = document.querySelector('.corazon');
+        if (corazon) {
+            corazon.addEventListener('mouseover', () => {
+                corazon.style.transform = 'scale(1.2)';
+                corazon.style.transition = 'transform 0.3s ease-in-out';
             });
-            document.getElementById('cartTotal').textContent = total;
+            corazon.addEventListener('mouseout', () => {
+                corazon.style.transform = 'scale(1)';
+            });
         }
     </script>
 </body>
